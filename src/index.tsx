@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux'
+
+import App from './App';
+import { ConfigStore } from './store'
+import './scss/index.scss';
+
+const store = ConfigStore()
+const RootDOM = document.getElementById('tfnsw-bus-operator-app')
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  RootDOM
 );
 
 // If you want to start measuring performance in your app, pass a function
