@@ -36,17 +36,17 @@
       "date": "2021-09-26",
       "routes": [
         {
-          "id": "94811",
+          "id": "94871",
           "routeVariant": "664 2 1",
           "deviationFromTimetable": 164
         },
         {
-          "id": "62788",
+          "id": "64788",
           "routeVariant": "UNKNOWN",
           "deviationFromTimetable": null
         },
         {
-          "id": "14221",
+          "id": "14222",
           "routeVariant": "834 1 1",
           "deviationFromTimetable": 423
         }
@@ -57,17 +57,17 @@
       "date": "2021-10-26",
       "routes": [
         {
-          "id": "94811",
+          "id": "96811",
           "routeVariant": "664 2 1",
           "deviationFromTimetable": 164
         },
         {
-          "id": "62788",
+          "id": "62888",
           "routeVariant": "UNKNOWN",
           "deviationFromTimetable": null
         },
         {
-          "id": "14221",
+          "id": "94221",
           "routeVariant": "834 1 1",
           "deviationFromTimetable": 423
         }
@@ -78,17 +78,17 @@
       "date": "2022-04-01",
       "routes": [
         {
-          "id": "94811",
+          "id": "94817",
           "routeVariant": "664 2 1",
           "deviationFromTimetable": 164
         },
         {
-          "id": "62788",
+          "id": "62728",
           "routeVariant": "UNKNOWN",
           "deviationFromTimetable": null
         },
         {
-          "id": "14221",
+          "id": "14921",
           "routeVariant": "834 1 1",
           "deviationFromTimetable": 423
         }
