@@ -2,7 +2,7 @@
   "operators": [
     {
       "name": "Sydney Buses",
-      "date": "25/09/2021",
+      "date": "2021-09-25",
       "routes": [
         {
           "id": "42612",
@@ -33,7 +33,49 @@
     },
     {
       "name": "Westbus",
-      "date": "25/09/2021",
+      "date": "2021-09-26",
+      "routes": [
+        {
+          "id": "94811",
+          "routeVariant": "664 2 1",
+          "deviationFromTimetable": 164
+        },
+        {
+          "id": "62788",
+          "routeVariant": "UNKNOWN",
+          "deviationFromTimetable": null
+        },
+        {
+          "id": "14221",
+          "routeVariant": "834 1 1",
+          "deviationFromTimetable": 423
+        }
+      ]
+    },
+    {
+      "name": "Eastbus",
+      "date": "2021-10-26",
+      "routes": [
+        {
+          "id": "94811",
+          "routeVariant": "664 2 1",
+          "deviationFromTimetable": 164
+        },
+        {
+          "id": "62788",
+          "routeVariant": "UNKNOWN",
+          "deviationFromTimetable": null
+        },
+        {
+          "id": "14221",
+          "routeVariant": "834 1 1",
+          "deviationFromTimetable": 423
+        }
+      ]
+    },
+    {
+      "name": "Southbus",
+      "date": "2022-04-01",
       "routes": [
         {
           "id": "94811",
