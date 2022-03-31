@@ -9,7 +9,17 @@ import { HandleError } from '../../utils';
 export const loadBusOperators = () => {
 	return async (dispatch: Dispatch) => {
 		try {
-			const resp = await fetch('http://myjson.dit.upm.es/api/bins/86mz');
+			/**
+			 * If has the real API url, then await fetch(${theUrl}).
+			 * In this case, just call to get local json file as example data.
+			 */
+			const resp = await fetch('../bus-services.example.json',{
+				headers : {
+					'Content-Type': 'application/json',
+					'Accept': 'application/json'
+				},
+				method : 'GET'
+			})
 			const payload = await resp.json();
 			dispatch({
 				type: LOAD_BUS_OPERATORS,
