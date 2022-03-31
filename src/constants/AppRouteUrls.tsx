@@ -1,6 +1,7 @@
 const AppRouteUrls = {
   init: '/',
-  list: '/list'
+  list: '/list',
+  details: '/list/:name/:date'
 }
 
 export default AppRouteUrls

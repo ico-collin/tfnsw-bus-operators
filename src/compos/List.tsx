@@ -1,16 +1,17 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { FC, useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Card from 'react-bootstrap/Card'
+import Button from 'react-bootstrap/Button'
 import { connect } from 'react-redux'
 import { jsx } from '@emotion/react'
 
 import Spinner from '../shared/Spinner'
 import CustAlert from '../shared/CustAlert'
-// import LinkButton from './features/LinkButton'
 import { OperatorsState, ListProps, Operator } from '../contracts/interfaces'
 import { CommonStrs, StaticTitles } from '../constants';
 import { loadBusOperators } from '../reducers/busOperators/BusOperators.Action'
@@ -30,6 +31,7 @@ const List: FC<ListProps> = ({
   error,
   loadBusOperators
 }) => {
+  let navigate = useNavigate()
   const [lsOperators, setlsOperators] = useState([])
 
   useEffect(() => {
@@ -43,12 +45,17 @@ const List: FC<ListProps> = ({
     // return () => {};
   }, [loadBusOperators])
 
+  const goDetailsByName = (name: string, date: string) => {
+    navigate(`/list/${name}/${date}`)
+  }
+
   const generateList = (busOperators: Operator[]) => busOperators.map((el) => (
     <Col css={styles.operatorCol} key={el.name + el.date} sm={12} md={6} lg={4} xl={3}>
       <Card border="secondary">
-        <Card.Header className="text-decoration-underline">{el.name ?? el.name}</Card.Header>
+        <Card.Header>
+          <Button variant="link" onClick={() => { goDetailsByName(el.name, el.date) }}>{el.name ?? el.name}</Button>
+        </Card.Header>
         <Card.Body>
-          {/* <Card.Title>Secondary Card Title</Card.Title> */}
           <Card.Text className="text-center">
             {el.date ?? el.date}
           </Card.Text>
