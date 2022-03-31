@@ -9,8 +9,8 @@ import { CreateStyles } from '../utils'
 const styles = CreateStyles({
   container: {
     boxShadow: '0 0.0625rem 0.1875rem -0.0625rem rgba(172, 172, 172, 0.5)',
-    '-webkit-box-shadow': '0 0.0625rem 0.1875rem -0.0625rem rgba(172, 172, 172, 0.5)',
-    '-moz-box-shadow': '0 0.0625rem 0.1875rem -0.0625rem rgba(172, 172, 172, 0.5)',
+    WebkitBoxShadow: '0 0.0625rem 0.1875rem -0.0625rem rgba(172, 172, 172, 0.5)',
+    MozBoxShadow: '0 0.0625rem 0.1875rem -0.0625rem rgba(172, 172, 172, 0.5)',
     borderBottom: '0.0625rem solid #fafafa',
     marginBottom: '0.6rem'
   },
