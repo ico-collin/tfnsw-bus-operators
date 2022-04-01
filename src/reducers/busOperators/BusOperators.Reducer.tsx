@@ -29,7 +29,8 @@ const BusOperators = (state = initBusOperatorsState,
 			localStorage.setItem(CommonStrs.localStorageOperators, JSON.stringify(payload))
 			return {
 				...state,
-				...payload
+				...payload,
+				error: initError
 			};
 		case LOAD_BUS_OPERATORS_FAILED:
 			/**

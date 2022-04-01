@@ -8,9 +8,7 @@ import Table from 'react-bootstrap/Table'
 import { OperatorRoute, Operator } from '../contracts/interfaces'
 import SceneTop from './features/SceneTop'
 import { CommonStrs } from '../constants'
-import LinkButton from './features/LinkButton'
 import Deviation from './features/Deviation'
-import { FormatDate } from '../utils'
 
 const ItemDetails: FC = () => {
   let params = useParams();
