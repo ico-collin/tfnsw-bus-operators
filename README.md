@@ -5,6 +5,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Node and Npm versions
 - [NodeJS](https://nodejs.org/) - v14.18.2
 - [npm] - v6.14.15
+- [react] - ^17.0.2
+- [redux] - ^4.1.2
+- [react-redux] - ^7.2.6
+- [react-router-dom] - ^6.2.2
+- [typescript] - ^4.6.3
+
 ## How to run it?
 
 git clone https://github.com/ico-collin/tfnsw-bus-operators.git

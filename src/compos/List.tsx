@@ -14,7 +14,7 @@ import Spinner from '../shared/Spinner'
 import CustAlert from '../shared/CustAlert'
 import SceneTop from './features/SceneTop'
 import { OperatorsState, ListProps, Operator } from '../contracts/interfaces'
-import { CommonStrs, AppRouteUrls } from '../constants';
+import { CommonStrs } from '../constants';
 import { loadBusOperators } from '../reducers/busOperators/BusOperators.Action'
 import { CreateStyles, FormatDate } from '../utils'
 
@@ -46,7 +46,7 @@ const List: FC<ListProps> = ({
   }, [loadBusOperators])
 
   const goDetailsByName = (name: string, date: string) => {
-    navigate(`${AppRouteUrls}/${name}/${date}`)
+    navigate(`/list/${name}/${date}`)
   }
 
   const generateList = (busOperators: Operator[]) => busOperators.map((el) => (
