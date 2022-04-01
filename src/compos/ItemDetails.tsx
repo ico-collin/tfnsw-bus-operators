@@ -20,7 +20,6 @@ const ItemDetails: FC = () => {
       const target = (JSON.parse(localStorageOperators).operators)
         .filter((el: Operator) => el.name === params.name)[0]
       setBusRoutes(target.routes)
-      debugger
     }
     // return () => {}
   }, [params.name])
