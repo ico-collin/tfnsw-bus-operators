@@ -21,7 +21,7 @@ const styles = CreateStyles({
 
 const Header: FC = () => (
   <div css={styles.container}>
-    <img css={styles.imgContainer} src={logo} alt="header-logo" />
+    <img width="59" height="59" css={styles.imgContainer} src={logo} alt="header-logo" />
   </div>
 )
 
