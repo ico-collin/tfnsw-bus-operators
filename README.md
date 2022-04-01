@@ -2,14 +2,15 @@
 
 This test is about a time checking application for the bus operator
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Node and Npm versions
+- [NodeJS](https://nodejs.org/) - v14.18.2
+- [npm] - v6.14.15
 ## How to run it?
 
 git clone https://github.com/ico-collin/tfnsw-bus-operators.git
 
 Then enter into the repo --> cd tfnsw-bus-operators
-## Node and Npm versions
-- [NodeJS](https://nodejs.org/) - v14.18.2
-- [npm] - v6.14.15
+
 ### Install dependencies
 ```
 npm install
