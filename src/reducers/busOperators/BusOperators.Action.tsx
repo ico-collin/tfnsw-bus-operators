@@ -1,13 +1,10 @@
-import { Dispatch } from 'redux';
+import { Dispatch } from 'redux'
 
 import {
 	LOAD_BUS_OPERATORS,
 	LOAD_BUS_OPERATORS_FAILED
-} from '../../types';
-import { HandleError } from '../../utils';
-import {
-	Operator
-} from '../../contracts/interfaces';
+} from '../../types'
+import { HandleError, SortDates } from '../../utils'
 
 export const loadBusOperators = () => {
 	return async (dispatch: Dispatch) => {
@@ -25,7 +22,7 @@ export const loadBusOperators = () => {
 			})
 			const data = await resp.json();
 			const payload =  {
-				operators: data.operators.sort((a: Operator, b: Operator) => Date.parse(b.date) - Date.parse(a.date))
+				operators: SortDates(data.operators)
 			}
 			dispatch({
 				type: LOAD_BUS_OPERATORS,

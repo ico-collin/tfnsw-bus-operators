@@ -9,6 +9,7 @@ import { OperatorRoute, Operator } from '../contracts/interfaces'
 import { CommonStrs } from '../constants';
 import LinkButton from './features/LinkButton'
 import Deviation from './features/Deviation'
+import { FormatDate } from '../utils'
 
 const ItemDetails: FC = () => {
   let params = useParams();
@@ -23,14 +24,6 @@ const ItemDetails: FC = () => {
     }
     // return () => {}
   }, [params.name])
-
-  const handleDate = () => {
-    if (params.date) {
-      const date = params.date.split('-').reverse().join('/')
-      return date
-    }
-    return params.date
-  }
 
   const formatFirstThreeDigits = (variant: string) => {
     const variantArr = variant.split(' ');
@@ -52,7 +45,7 @@ const ItemDetails: FC = () => {
       <Row>
         <Col>
           <h3 className="mb-3 fw-bold">
-            {params.name} -- {handleDate()}
+            {params.name} -- {FormatDate(String(params.date))}
           </h3>
         </Col>
       </Row>

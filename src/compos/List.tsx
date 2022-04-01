@@ -15,7 +15,7 @@ import CustAlert from '../shared/CustAlert'
 import { OperatorsState, ListProps, Operator } from '../contracts/interfaces'
 import { CommonStrs, StaticTitles } from '../constants';
 import { loadBusOperators } from '../reducers/busOperators/BusOperators.Action'
-import { CreateStyles } from '../utils'
+import { CreateStyles, FormatDate } from '../utils'
 
 const styles = CreateStyles({
   operatorCol: {
@@ -23,6 +23,9 @@ const styles = CreateStyles({
     WebkitBoxShadow: '0 0.0625rem 0.1875rem -0.0625rem rgba(172, 172, 172, 0.5)',
     MozBoxShadow: '0 0.0625rem 0.1875rem -0.0625rem rgba(172, 172, 172, 0.5)',
     marginBottom: '1rem'
+  },
+  heightKeeper: {
+    height: '2.375rem'
   }
 })
 
@@ -57,7 +60,7 @@ const List: FC<ListProps> = ({
         </Card.Header>
         <Card.Body>
           <Card.Text className="text-center">
-            {el.date ?? el.date}
+            {FormatDate(String(el.date))}
           </Card.Text>
         </Card.Body>
       </Card>
@@ -80,7 +83,7 @@ const List: FC<ListProps> = ({
   return (
     <Container>
       <Row>
-        <Col>&nbsp;</Col>
+        <Col css={styles.heightKeeper}>&nbsp;</Col>
       </Row>
       <Row>
         <Col>
