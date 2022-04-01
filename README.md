@@ -30,7 +30,7 @@ npm start
 | constants | constants collection |
 | contracts | for interfaces, classes(models), types |
 | routes | app routes |
-| scss | general styling |
+| scss | general styling (most of time use [@emotion]) |
 | shared | shared components |
 | store | configure store |
 | types | reduct text statements |
