@@ -1,4 +1,4 @@
-import { CreateEmotionStyles } from "../contracts/types";
+import { CreateEmotionStyles } from '../contracts/types'
 
 /**
  * Help to create jsx css class

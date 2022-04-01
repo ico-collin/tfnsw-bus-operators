@@ -1,4 +1,4 @@
-import { Dispatch, AnyAction } from "redux";
+import { Dispatch, AnyAction } from 'redux'
 
 import { ErrorState } from '../contracts/interfaces'
 

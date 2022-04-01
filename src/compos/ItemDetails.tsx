@@ -1,12 +1,13 @@
-import { FC, useState, useEffect, Fragment } from 'react'
-import { useParams } from "react-router-dom";
+import { FC, useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import Container from 'react-bootstrap/Container'
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Table from 'react-bootstrap/Table'
 
 import { OperatorRoute, Operator } from '../contracts/interfaces'
-import { CommonStrs } from '../constants';
+import SceneTop from './features/SceneTop'
+import { CommonStrs } from '../constants'
 import LinkButton from './features/LinkButton'
 import Deviation from './features/Deviation'
 import { FormatDate } from '../utils'
@@ -37,18 +38,7 @@ const ItemDetails: FC = () => {
 
   return (
     <Container>
-      <Row>
-        <Col>
-          <LinkButton />
-        </Col>
-      </Row>
-      <Row>
-        <Col>
-          <h3 className="mb-3 fw-bold">
-            {params.name} -- {FormatDate(String(params.date))}
-          </h3>
-        </Col>
-      </Row>
+      <SceneTop />
       <Row >
         <Col>
         <Table striped hover responsive>

@@ -12,8 +12,9 @@ import { jsx } from '@emotion/react'
 
 import Spinner from '../shared/Spinner'
 import CustAlert from '../shared/CustAlert'
+import SceneTop from './features/SceneTop'
 import { OperatorsState, ListProps, Operator } from '../contracts/interfaces'
-import { CommonStrs, StaticTitles } from '../constants';
+import { CommonStrs } from '../constants';
 import { loadBusOperators } from '../reducers/busOperators/BusOperators.Action'
 import { CreateStyles, FormatDate } from '../utils'
 
@@ -23,9 +24,6 @@ const styles = CreateStyles({
     WebkitBoxShadow: '0 0.0625rem 0.1875rem -0.0625rem rgba(172, 172, 172, 0.5)',
     MozBoxShadow: '0 0.0625rem 0.1875rem -0.0625rem rgba(172, 172, 172, 0.5)',
     marginBottom: '1rem'
-  },
-  heightKeeper: {
-    height: '2.375rem'
   }
 })
 
@@ -45,7 +43,6 @@ const List: FC<ListProps> = ({
     if (localStorageOperators && typeof JSON.parse(localStorageOperators) === 'object') {
       setlsOperators(JSON.parse(localStorageOperators).operators)
     }
-    // return () => {};
   }, [loadBusOperators])
 
   const goDetailsByName = (name: string, date: string) => {
@@ -82,16 +79,7 @@ const List: FC<ListProps> = ({
   }
   return (
     <Container>
-      <Row>
-        <Col css={styles.heightKeeper}>&nbsp;</Col>
-      </Row>
-      <Row>
-        <Col>
-          <h3 className="mb-3 fw-bold">
-            {StaticTitles.listPageTitle}
-          </h3>
-        </Col>
-      </Row>
+      <SceneTop />
       <Row >
         {generateList(lsOperators && lsOperators.length ? lsOperators : operators)}
       </Row>
