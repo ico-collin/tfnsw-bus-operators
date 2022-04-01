@@ -22,6 +22,7 @@ npm start
 ### Structure
 
 | Directory | Purpose |
+| ----------- | ----------- |
 | src | root source folder |
 | _assets | for images or other files |
 | compos | components collection |
